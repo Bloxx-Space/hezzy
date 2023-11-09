@@ -139,7 +139,7 @@ function _World() {
         TWO: TOUCH.DOLLY_ROTATE,
       };
 
-      controls.minDistance = 2.2;
+      controls.minDistance = 2;
       controls.maxDistance = 5;
       return () => {
         controls.dispose();

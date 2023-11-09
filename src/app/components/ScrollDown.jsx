@@ -13,7 +13,7 @@ export default function ScrollDown() {
         animate={{ opacity: 0 }}
         exit={{ opacity: 0 }}
         className="flex h-screen w-screen absolute top-0 pb-16"
-        style={{ userSelect: "none", pointerEvents: "none" }}
+        style={{ userSelect: "none", pointerEvents: "none"}}
       >
         <div
           className="scrolldown m-auto"

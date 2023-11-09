@@ -1,5 +1,6 @@
 "use client"
 import NewBackgroundVideo from "./components/NewBackgroundVideo";
+import NewBackgroundGradient from "./components/NewBackgroundGradient";
 import World from "./components/World";
 import ScrollDown from "./components/ScrollDown"
 
@@ -13,6 +14,7 @@ export default function Home() {
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
 
           <NewBackgroundVideo src="https://realmtest.sfo3.digitaloceanspaces.com/ROC/rocback.mp4" />
+          <NewBackgroundGradient gradient="linear-gradient(180deg, #00000000, #000000ff)" />
           <About />
 
           <ScrollDown />
