@@ -157,7 +157,7 @@ function _World() {
         exit={{ opacity: 0 }}
       >
         <div className="flex justify-center items-center w-128 h-96 content-center">
-          <Canvas camera={{}} className="h-2x l w-2xl p-8">
+          <Canvas className="h-2x l w-2xl p-8">
             <Suspense fallback={<></>}>
               <CameraController />
               <ambientLight />

@@ -67,7 +67,12 @@ const AboutSection = () => {
               variants={fadeIn("", "", 0.1, 1)}
               className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
             >
-              {`As an expert brand strategist, we are here to guide you on an exhilarating journey to redefine and enhance your brand's identity. Whether you're a startup looking to make your mark or an established company seeking a refreshing rebrand, our landing is the launchpad for your brand's transformation.`}
+              {`As an expert brand strategist, we are here to guide you on an exhilarating journey to redefine and enhance your brand's identity.`}
+
+              {/**
+               * 
+               Whether you're a startup looking to make your mark or an established company seeking a refreshing rebrand, our landing is the launchpad for your brand's transformation.
+               */}
             </motion.p>
 
             <motion.div

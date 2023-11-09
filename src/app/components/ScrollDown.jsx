@@ -9,10 +9,10 @@ export default function ScrollDown() {
     <>
       <motion.div
         transition={{ duration: 0.3, delay: 4 }}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
+        initial={{ opacity: 1}}
+        animate={{ opacity: 0, y: 20 }}
         exit={{ opacity: 0 }}
-        className="flex h-screen w-screen absolute top-0 pb-16"
+        className="flex h-[calc(100vh-74px)] w-screen absolute top-0 pb-16"
         style={{ userSelect: "none", pointerEvents: "none"}}
       >
         <div
