@@ -37,29 +37,10 @@ const ServiceCard = ({ index, title, icon }) => (
   </div>
 );
 
-const About = () => {
+const AboutSection = () => {
   return (
     <>
-        <video
-          id="video"
-          style={{
-            display: "inline-block",
-            position: "fixed",
-            objectFit: "cover",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: -2,
-          }}
-          src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
-          playsInline
-          webkit-playsInline
-          muted
-          loop
-          autoplay
-          autoPlay
-        ></video>
+        
       <motion.div
         className="xs:w-[250px] w-full"
         variants={fadeIn("", "", 0.1, 0.8)}
@@ -73,7 +54,14 @@ const About = () => {
           >
             Introduction
           </motion.p>
+
+
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+          >
           <h2 className={styles.sectionHeadText}>Overview.</h2>
+          </motion.p>
         </motion.div>
 
         <motion.p
@@ -96,5 +84,5 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(AboutSection, "about");
 //export default SectionWrapper(<div>gsrgs</div>, "fsefse");

@@ -17,11 +17,13 @@ import { fadeIn, textVariant } from "../utils/motion";
 import Image from "next/image";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <div className="xs:w-[250px] w-full" 
-  >
+  <div className="xs:w-[250px] w-full">
     <motion.div
-    style={{ backgroundColor: "#00000020", padding: "10px" }}
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      style={{ backgroundColor: "#00000020", padding: "10px" }}
+
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.9 }}
+      variants={fadeIn("right", "spring", index * 1.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
@@ -48,62 +50,60 @@ const ServiceCard = ({ index, title, icon }) => (
   </div>
 );
 
-const World = () => {
+const WorldSection = () => {
   return (
     <>
-
-<motion.div 
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.98 }}
-          >
-     <video
-        id="video"
-        style={{
-          display: "inline-block",
-          position: "static",
-          objectFit: "cover",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: -1,
-        }}
-        src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
-        playsInline
-        webkit-playsInline
-        muted
-        loop
-        autoplay
-        autoPlay
-      ></video>
+      <motion.div
+        variants={fadeIn("", "", 0.1, 0.5)}
+        whileHover={{ scale: 1.01 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <video
+          id="video"
+          style={{
+            display: "inline-block",
+            position: "static",
+            objectFit: "cover",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: -1,
+          }}
+          src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
+          playsInline
+          webkit-playsInline
+          muted
+          loop
+          autoplay
+          autoPlay
+        ></video>
       </motion.div>
       <div className="xs:w-[250px] w-full">
-
         <_World></_World>
       </div>
 
       <motion.div
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
-        >
-          <p className={styles.sectionSubText}>
-            {" "}
-            {`Welcome to a world where your brand's visual identity comes to life.
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
+      >
+        <p className={styles.sectionSubText}>
+          {" "}
+          {`Welcome to a world where your brand's visual identity comes to life.
       `}
-          </p>
-        </motion.div>
+        </p>
+      </motion.div>
 
-
-        <div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-3 grid-rows-1">
-          {services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
-          ))}
-        </div>
+      <div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-3 grid-rows-1">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(World, "world");
+export default SectionWrapper(WorldSection, "world");
 
 function MeshComponent() {
   const fileUrl =
@@ -136,7 +136,7 @@ function _World() {
 
       controls.touches = {
         ONE: TOUCH.ROTATE,
-        TWO: TOUCH.DOLLY_ROTATE
+        TWO: TOUCH.DOLLY_ROTATE,
       };
 
       controls.minDistance = 2.2;
