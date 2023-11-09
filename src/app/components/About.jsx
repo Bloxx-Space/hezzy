@@ -42,7 +42,7 @@ const AboutSection = () => {
     <>
         
       <motion.div
-        className="xs:w-[250px] w-full"
+        className="xs:w-[250px] w-full min-h-screen"
         variants={fadeIn("", "", 0.1, 0.8)}
         style={{ backgroundColor: "#00000020", padding: "50px" }}
       >
@@ -56,13 +56,11 @@ const AboutSection = () => {
           </motion.p>
 
 
-          <motion.p
-            whileHover={{ scale: 1.05 }}
+          <motion.h2 whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-          >
-          <h2 className={styles.sectionHeadText}>Overview.</h2>
-          </motion.p>
-        </motion.div>
+            className={styles.sectionHeadText}>
+              Overview.
+        </motion.h2>
 
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
@@ -78,6 +76,7 @@ const AboutSection = () => {
           <p className={styles.sectionSubText}>
             Join us on this adventure and witness the power of strategic design.
           </p>
+        </motion.div>
         </motion.div>
       </motion.div>
     </>

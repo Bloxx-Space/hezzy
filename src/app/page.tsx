@@ -13,6 +13,7 @@ export default function Home() {
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
 
           <About />
+          <ScrollDown/>
           <World/>
         </div></div>
     </main>
