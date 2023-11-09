@@ -5,14 +5,6 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'realmtest.sfo3.digitaloceanspaces.com',
-        port: '',
-        pathname: '/bloxx/**',
-      },
-    ],
   },
 }
 

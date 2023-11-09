@@ -42,7 +42,7 @@ const AboutSection = () => {
     <>
       <div className="min-h-screen">
         <motion.div
-          className="xs:w-[250px] w-full"
+          className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
           style={{ backgroundColor: "#00000020", padding: "50px", zIndex: 2 }}
         >
