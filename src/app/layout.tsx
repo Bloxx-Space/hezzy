@@ -1,13 +1,16 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+import Head from "next/head"
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Where Brands become reality ...',
+  title: 'ROC STAR STUDIO',
   description: 'home.',
-  icons: [
-  ], 
+  openGraph: {
+    images: 'https://realmtest.sfo3.digitaloceanspaces.com/ROC/rocback-min.jpg',
+  },
 }
 
 
