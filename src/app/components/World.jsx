@@ -19,7 +19,7 @@ import Image from "next/image";
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
-      style={{ backgroundColor: "#00000020", padding: "10px" }}
+      style={{ backgroundColor: "#00000020", padding: "10px"}}
 
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}

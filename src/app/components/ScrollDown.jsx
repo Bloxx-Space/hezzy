@@ -13,11 +13,12 @@ export default function ScrollDown() {
         animate={{ opacity: 0 }}
         exit={{ opacity: 0 }}
         className="flex h-screen w-screen absolute top-0 pb-8"
+        style={{ userSelect: "none", pointerEvents: "none" }}
       >
         <div
           className="scrolldown m-auto"
           onClick={() => {
-            window.scrollTo(0, 800);
+            window.scrollTo(0, 1000);
           }}
         >
           <motion.p
@@ -25,6 +26,7 @@ export default function ScrollDown() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             variants={fadeIn("right", "spring", 0.5, 0.75)}
+            style={{ userSelect: "auto", pointerEvents: "auto" }}
             className="whitespace-nowrap pl-12 sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider"
           >
             SCROLL DOWN

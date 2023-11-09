@@ -40,45 +40,48 @@ const ServiceCard = ({ index, title, icon }) => (
 const AboutSection = () => {
   return (
     <>
-        
-      <motion.div
-        className="xs:w-[250px] w-full min-h-screen"
-        variants={fadeIn("", "", 0.1, 0.8)}
-        style={{ backgroundColor: "#00000020", padding: "50px" }}
-      >
-        <motion.div variants={textVariant()}>
-          <motion.p
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            className={styles.sectionSubHeadText}
-          >
-            Introduction
-          </motion.p>
-
-
-          <motion.h2 whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.9 }}
-            className={styles.sectionHeadText}>
-              Overview.
-        </motion.h2>
-
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
-        >
-          {`As an expert brand strategist, we are here to guide you on an exhilarating journey to redefine and enhance your brand's identity. Whether you're a startup looking to make your mark or an established company seeking a refreshing rebrand, our landing is the launchpad for your brand's transformation.`}
-        </motion.p>
-
+      <div className="min-h-screen">
         <motion.div
-          variants={fadeIn("", "", 1.1, 1)}
-          className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
+          className="xs:w-[250px] w-full"
+          variants={fadeIn("", "", 0.1, 0.8)}
+          style={{ backgroundColor: "#00000020", padding: "50px", zIndex: 2 }}
         >
-          <p className={styles.sectionSubText}>
-            Join us on this adventure and witness the power of strategic design.
-          </p>
+          <motion.div variants={textVariant()}>
+            <motion.p
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9 }}
+              className={styles.sectionSubHeadText}
+            >
+              Introduction
+            </motion.p>
+
+            <motion.h2
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9 }}
+              className={styles.sectionHeadText}
+            >
+              Overview.
+            </motion.h2>
+
+            <motion.p
+              variants={fadeIn("", "", 0.1, 1)}
+              className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
+            >
+              {`As an expert brand strategist, we are here to guide you on an exhilarating journey to redefine and enhance your brand's identity. Whether you're a startup looking to make your mark or an established company seeking a refreshing rebrand, our landing is the launchpad for your brand's transformation.`}
+            </motion.p>
+
+            <motion.div
+              variants={fadeIn("", "", 1.1, 1)}
+              className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
+            >
+              <p className={styles.sectionSubText}>
+                Join us on this adventure and witness the power of strategic
+                design.
+              </p>
+            </motion.div>
+          </motion.div>
         </motion.div>
-        </motion.div>
-      </motion.div>
+      </div>
     </>
   );
 };
