@@ -10,7 +10,7 @@ import Image from "next/image";
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fade("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
@@ -44,47 +44,64 @@ const AboutSection = () => {
         <motion.div
           className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
-          style={{ backgroundColor: "#00000020", padding: "50px", zIndex: 2 }}
+          style={{ padding: "50px", zIndex: 2 }}
         >
-          <motion.div variants={textVariant()}>
-            <motion.p
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.9 }}
-              className={styles.sectionSubHeadText}
-            >
-              Introduction
-            </motion.p>
-
-            <motion.h2
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.9 }}
-              className={styles.sectionHeadText}
-            >
-              Overview.
-            </motion.h2>
-
-            <motion.p
-              variants={fadeIn("", "", 0.1, 1)}
-              className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
-            >
-              {`As an expert brand strategist, we are here to guide you on an exhilarating journey to redefine and enhance your brand's identity.`}
-
-              {/**
-               * 
-               Whether you're a startup looking to make your mark or an established company seeking a refreshing rebrand, our landing is the launchpad for your brand's transformation.
-               */}
-            </motion.p>
-
-            <motion.div
-              variants={fadeIn("", "", 1.1, 1)}
-              className="mt-4 text-secondary text-[17px] leading-[30px] p-8"
-            >
-              <p className={styles.sectionSubText}>
-                Join us on this adventure and witness the power of strategic
-                design.
-              </p>
-            </motion.div>
-          </motion.div>
+          <motion.h2
+            variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadText}
+          >
+            For Talent.
+          </motion.h2>{" "}
+          <motion.h2
+            variants={fadeIn("up", "spring", 1 * 0.6, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadText}
+          >
+            For Brands.
+          </motion.h2>{" "}
+          <motion.h2
+            variants={fadeIn("up", "spring", 1 * 0.7, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadText}
+          >
+            For Enterprise.
+          </motion.h2>
+          <br />
+          <br />
+          <motion.h6
+            variants={fadeIn("up", "spring", 1 * 0.9, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadLilText}
+          >
+            About.
+          </motion.h6>
+          <motion.h6
+            variants={fadeIn("up", "spring", 1 * 1.0, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadLilText}
+          >
+            Career.
+          </motion.h6>
+          <motion.h6
+            variants={fadeIn("up", "spring", 1 * 1.0, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#F0D0D0" }}
+            className={styles.sectionHeadLilText}
+          >
+            Contact.
+          </motion.h6>
         </motion.div>
       </div>
     </>
