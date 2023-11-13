@@ -44,7 +44,7 @@ const AboutSection = () => {
         <motion.div
           className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
-          style={{ padding: "50px", zIndex: 2 }}
+          style={{ padding: "25px", zIndex: 2 }}
         >
           <motion.h2
             variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}
