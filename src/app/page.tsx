@@ -13,7 +13,6 @@ export default function Home() {
       <div className='relative z-0 bg-primary text-white'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
 
-          <NewBackgroundVideo src="https://realmtest.sfo3.digitaloceanspaces.com/ROC/rocback.mp4" />
           <NewBackgroundGradient gradient="linear-gradient(180deg, #990000ff, #110000ff)" />
           <About />
 
