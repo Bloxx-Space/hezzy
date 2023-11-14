@@ -43,20 +43,15 @@ const AboutDescriptionSection = () => {
     <>
       <Close
         onClick={() => {
-          animate(
-            "#aboutdescriptionsection",
-            { x: [0, 200], opacity: [1,0]} ,
-           
-          ).then(() => {
+          animate("#aboutdescriptionsection", {
+            x: [0, 200],
+            opacity: [1, 0],
+          }).then(() => {
             animate("#aboutdescriptionsection", { display: "none" }).then(
               () => {
                 animate("#aboutsection", { display: "inline-block" }).then(
                   () => {
-                    animate(
-                      "#aboutsection",
-                      { x: [-200, 0], opacity: [0,1] },
-                      
-                    );
+                    animate("#aboutsection", { x: [-200, 0], opacity: [0, 1] });
                   }
                 );
               }
@@ -70,7 +65,7 @@ const AboutDescriptionSection = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
         >
           <p className={styles.sectionSubText}>
-            Welcome to a world where your brand's visual identity comes to life.
+            {`Welcome to a world where your brand's visual identity comes to life.`}
           </p>
         </motion.div>
       </div>
