@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 
 import { styles } from "../styles/styles";
 import { services } from "../constants/constants";
@@ -40,7 +40,7 @@ const ServiceCard = ({ index, title, icon }) => (
 const AboutSection = () => {
   return (
     <>
-      <div className="min-h-screen">
+      <div className="min-h-screen min-w-screen">
         <motion.div
           className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
@@ -52,11 +52,27 @@ const AboutSection = () => {
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadText}
+            onClick={() => {
+
+              animate("#aboutsection", { x: [0, 200] , opacity: 0 }).then(() => {
+                animate("#aboutsection", { display: "none" }).then(() => {
+                  animate("#aboutdescriptionsection", {
+                    display: "inline-block",
+                  }).then(() => {
+                    animate(
+                      "#aboutdescriptionsection",
+                      { opacity: 1 },
+                    );
+                  });
+                });
+              });
+            }}
           >
             For Talent.
-          </motion.h2>{" "}
+          </motion.h2>
+          
           <motion.h2
-            variants={fadeIn("up", "spring", 1 * 0.6, 0.75)}
+            variants={fadeIn("up", "spring", 1 * 0.7, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
@@ -65,7 +81,7 @@ const AboutSection = () => {
             For Brands.
           </motion.h2>{" "}
           <motion.h2
-            variants={fadeIn("up", "spring", 1 * 0.7, 0.75)}
+            variants={fadeIn("up", "spring", 1 * 0.9, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
@@ -76,7 +92,7 @@ const AboutSection = () => {
           <br />
           <br />
           <motion.h6
-            variants={fadeIn("up", "spring", 1 * 0.9, 0.75)}
+            variants={fadeIn("up", "spring", 1 * 1.1, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
@@ -85,7 +101,7 @@ const AboutSection = () => {
             About.
           </motion.h6>
           <motion.h6
-            variants={fadeIn("up", "spring", 1 * 1.0, 0.75)}
+            variants={fadeIn("up", "spring", 1 * 1.2, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
@@ -94,7 +110,7 @@ const AboutSection = () => {
             Career.
           </motion.h6>
           <motion.h6
-            variants={fadeIn("up", "spring", 1 * 1.0, 0.75)}
+            variants={fadeIn("up", "spring", 1 * 1.3, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}

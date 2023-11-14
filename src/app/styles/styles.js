@@ -9,11 +9,10 @@ const styles = {
     "text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
   sectionHeadText:
-    "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[42px] w-min whitespace-nowrap",
+    "text-white font-black md:text-[60px] sm:text-[30px] xs:text-[28px] text-[34px] w-min whitespace-nowrap",
 
   sectionHeadLilText:
-    "text-white font-black md:text-[18px] sm:text-[18px] xs:text-[18px] text-[18px] w-min pt-4 whitespace-nowrap", 
-
+    "text-white font-black md:text-[18px] sm:text-[16px] xs:text-[14px] text-[18px] w-min pt-4 whitespace-nowrap", 
 
 
   sectionSubText:
