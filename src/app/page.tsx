@@ -1,12 +1,16 @@
 "use client"
-import NewBackgroundVideo from "./components/NewBackgroundVideo";
 import NewBackgroundGradient from "./components/NewBackgroundGradient";
-import World from "./components/World";
 import ScrollDown from "./components/ScrollDown"
+import React, { Suspense } from "react"
 
-import { AnimatePresence } from "framer-motion";
+import { About } from "./components/"
 
-import { About, TalentDescription, BrandDescription, EnterpriseDescription } from "./components/"
+
+const World = React.lazy(() => import('./components/World'));
+const TalentDescription = React.lazy(() => import('./components/TalentDescription'));
+const BrandDescription = React.lazy(() => import('./components/BrandDescription'));
+const EnterpriseDescription = React.lazy(() => import('./components/EnterpriseDescription'));
+
 export default function Home() {
   return (<>
 
@@ -23,7 +27,11 @@ export default function Home() {
 
             <span
               id="worldsection">
-              <World />
+
+              <Suspense fallback={<></>}>
+                <World />
+
+              </Suspense>
 
             </span>
           </span>
@@ -31,17 +39,26 @@ export default function Home() {
           <span
             id="talentdescriptionsection"
             style={{ display: "none" }}>
-            <TalentDescription />
+
+            <Suspense fallback={<></>}>
+              <TalentDescription />
+            </Suspense>
           </span>
           <span
             id="branddescriptionsection"
             style={{ display: "none" }}>
-            <BrandDescription />
+
+            <Suspense fallback={<></>}>
+              <BrandDescription />
+            </Suspense>
           </span>
           <span
             id="enterprisedescriptionsection"
             style={{ display: "none" }}>
-            <EnterpriseDescription />
+
+            <Suspense fallback={<></>}>
+              <EnterpriseDescription />
+            </Suspense>
           </span>
 
 
