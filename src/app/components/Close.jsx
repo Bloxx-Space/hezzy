@@ -11,8 +11,8 @@ const Close = (props) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        whileHover={{ scale: 1.05, color: "#FFF" }}
-        whileTap={{ scale: 0.9, color: "#FFF" }}
+        whileHover={{ scale: 1.02, color: "#FFF" }}
+        whileTap={{ scale: 0.97, color: "#FFF" }}
         whileInView={{ color: "#F0D0D0" }}
         variants={fadeIn("right", "spring", 0.5, 0.75)}
         style={{ userSelect: "auto", pointerEvents: "auto" }}

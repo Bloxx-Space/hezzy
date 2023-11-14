@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
 
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
-      variants={fadeIn("right", "spring", index * 1.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 1, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div

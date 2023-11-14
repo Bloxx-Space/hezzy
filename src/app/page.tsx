@@ -14,7 +14,7 @@ export default function Home() {
     <main className="bg-black min-h-screen">
       <div className='relative z-0 bg-primary text-white'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <NewBackgroundGradient gradient="linear-gradient(180deg, #990000ff, #110000ff)" />
+          <NewBackgroundGradient gradient="linear-gradient(180deg, #990000ff, #000000ff)" />
 
           <span id="mainsection">
             <About />
