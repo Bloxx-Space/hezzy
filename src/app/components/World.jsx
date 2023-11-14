@@ -53,32 +53,6 @@ const ServiceCard = ({ index, title, icon }) => (
 const WorldSection = () => {
   return (
     <>
-      <motion.div
-        variants={fadeIn("", "", 0.1, 0.5)}
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        <video
-          id="video"
-          style={{
-            display: "inline-block",
-            position: "static",
-            objectFit: "cover",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: -1,
-          }}
-          src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
-          playsInline
-          webkit-playsInline
-          muted
-          loop
-          autoplay
-          autoPlay
-        ></video>
-      </motion.div>
       <div className="xs:w-[250px] w-full">
         <_World></_World>
       </div>
