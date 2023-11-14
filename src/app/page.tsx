@@ -6,7 +6,7 @@ import ScrollDown from "./components/ScrollDown"
 
 import { AnimatePresence } from "framer-motion";
 
-import { About, AboutDescription } from "./components/"
+import { About, TalentDescription, BrandDescription, EnterpriseDescription } from "./components/"
 export default function Home() {
   return (<>
 
@@ -16,26 +16,38 @@ export default function Home() {
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <NewBackgroundGradient gradient="linear-gradient(180deg, #990000ff, #110000ff)" />
 
-          <span id="aboutsection">
+          <span id="mainsection">
             <About />
 
             <ScrollDown />
+
+            <span
+              id="worldsection">
+              <World />
+
+            </span>
           </span>
 
           <span
-            id="aboutdescriptionsection"
+            id="talentdescriptionsection"
             style={{ display: "none" }}>
-            <AboutDescription />
+            <TalentDescription />
           </span>
-
-
-
-
           <span
-            id="worldsection">
-            <World />
-
+            id="branddescriptionsection"
+            style={{ display: "none" }}>
+            <BrandDescription />
           </span>
+          <span
+            id="enterprisedescriptionsection"
+            style={{ display: "none" }}>
+            <EnterpriseDescription />
+          </span>
+
+
+
+
+
         </div></div>
     </main></>
   );

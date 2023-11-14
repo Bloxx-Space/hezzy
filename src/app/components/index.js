@@ -1,8 +1,12 @@
 import About from "./About";
-import AboutDescription from "./AboutDescription"
+import TalentDescription from "./TalentDescription"
+import BrandDescription from "./BrandDescription"
+import EnterpriseDescription from "./EnterpriseDescription"
 
 
 export {
   About,
-  AboutDescription
+  TalentDescription,
+  BrandDescription,
+  EnterpriseDescription
 };

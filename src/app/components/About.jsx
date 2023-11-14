@@ -37,6 +37,20 @@ const ServiceCard = ({ index, title, icon }) => (
   </div>
 );
 
+function jumpTo(section)
+{
+
+  animate("#mainsection", { opacity: 0, }, { type: "interia"}).then(() => {
+    animate("#mainsection", { display: "none" }).then(() => {
+      animate(section, {
+        display: "block",
+      }).then(() => {
+        animate(section, { opacity: 1 });
+      });
+    });
+  });
+}
+
 const AboutSection = () => {
   return (
     <>
@@ -53,30 +67,20 @@ const AboutSection = () => {
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadText}
             onClick={() => {
-
-              animate("#aboutsection", { x: [0, 200] , opacity: 0 }).then(() => {
-                animate("#aboutsection", { display: "none" }).then(() => {
-                  animate("#aboutdescriptionsection", {
-                    display: "inline-block",
-                  }).then(() => {
-                    animate(
-                      "#aboutdescriptionsection",
-                      { opacity: 1 },
-                    );
-                  });
-                });
-              });
+              jumpTo("#talentdescriptionsection")
             }}
           >
             For Talent.
           </motion.h2>
-          
           <motion.h2
             variants={fadeIn("up", "spring", 1 * 0.7, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadText}
+            onClick={() => {
+              jumpTo("#branddescriptionsection")
+            }}
           >
             For Brands.
           </motion.h2>{" "}
@@ -86,6 +90,9 @@ const AboutSection = () => {
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadText}
+            onClick={() => {
+              jumpTo("#enterprisedescriptionsection")
+            }}
           >
             For Enterprise.
           </motion.h2>

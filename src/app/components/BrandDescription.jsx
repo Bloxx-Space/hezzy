@@ -38,34 +38,31 @@ const ServiceCard = ({ index, title, icon }) => (
   </div>
 );
 
-const AboutDescriptionSection = () => {
+const BrandDescriptionSection = () => {
   return (
     <>
       <Close
         onClick={() => {
-          animate("#aboutdescriptionsection", {
-            x: [0, 200],
-            opacity: [1, 0],
+          animate("#branddescriptionsection", {
+            opacity: 0,
           }).then(() => {
-            animate("#aboutdescriptionsection", { display: "none" }).then(
+            animate("#branddescriptionsection", { display: "none" }).then(
               () => {
-                animate("#aboutsection", { display: "inline-block" }).then(
-                  () => {
-                    animate("#aboutsection", { x: [-200, 0], opacity: [0, 1] });
-                  }
-                );
+                animate("#mainsection", { display: "block" }).then(() => {
+                  animate("#mainsection", { opacity: 1 });
+                });
               }
             );
           });
         }}
       />
-      <div className="min-h-screen z-10">
+      <div className="min-h-screen">
         <motion.div
           variants={fadeIn("left", "spring", 1 * 0.7, 0.75)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
         >
           <p className={styles.sectionSubText}>
-            {`Welcome to a world where your brand's visual identity comes to life.`}
+            {`BRAND BRAND BRANDSSS.`}
           </p>
         </motion.div>
       </div>
@@ -73,5 +70,5 @@ const AboutDescriptionSection = () => {
   );
 };
 
-export default SectionWrapper(AboutDescriptionSection, "about");
+export default SectionWrapper(BrandDescriptionSection, "BrandDescriptionSection");
 //export default SectionWrapper(<div>gsrgs</div>, "fsefse");
