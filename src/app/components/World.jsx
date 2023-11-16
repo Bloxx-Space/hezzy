@@ -16,6 +16,9 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import Image from "next/image";
 
+
+import NewBackgroundGradient from "./NewBackgroundGradient";
+
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
@@ -73,6 +76,7 @@ const WorldSection = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+      
     </>
   );
 };

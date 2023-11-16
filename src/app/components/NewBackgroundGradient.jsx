@@ -14,7 +14,7 @@ const NewBackgroundGradient = (props) => {
         
         exit={{ opacity: 0 }}
         
-        className="flex h-screen w-screen absolute top-0"
+        className="flex h-screen w-screen absolute"
         style={{ userSelect: "none", pointerEvents: "none",  backgroundImage: props.gradient }}
       >
 

@@ -29,7 +29,10 @@ export default function Home() {
               id="worldsection">
 
               <Suspense fallback={<></>}>
+
+
                 <World />
+
 
               </Suspense>
 
