@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
+import Gtag from "./components/Gtag"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,23 +12,6 @@ export const metadata = {
     images: 'https://realmtest.sfo3.digitaloceanspaces.com/ROC/rocback-min.jpg',
   },
 }
-
-const Gtag = () => {
-  if (typeof process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS !== "undefined")
-    return (<>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-
-      <Script id="google-analytics">
-        {`
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-`}
-      </Script></>)
-}
-
 
 export default function RootLayout({
   children,
