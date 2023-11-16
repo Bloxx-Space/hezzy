@@ -62,7 +62,11 @@ const EnterpriseDescriptionSection = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
         >
           <p className={styles.sectionSubText}>
-            {`ENTERPRIZE.`}
+            {` Enterprise Solutions – where innovation meets scale, and creativity transforms into impact. Our Enterprise page is a testament to our commitment to partnering with corporations and industry leaders to elevate their brands and redefine the boundaries of possibility.`}
+          </p><br/><br/>
+
+          <p className={styles.sectionSubText}>
+            {`Our approach is rooted in a deep understanding of your business ecosystem. From comprehensive brand overhauls to targeted marketing campaigns, we tailor our services to amplify your enterprise's strengths and navigate the challenges of a competitive marketplace.`}
           </p>
         </motion.div>
       </div>

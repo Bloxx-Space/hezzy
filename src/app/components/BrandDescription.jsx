@@ -62,41 +62,49 @@ const BrandDescriptionSection = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
         >
           <p className={styles.sectionSubText}>
-            {`BRAND BRAND BRANDSSS.`}
+            {`
+Welcome to ROC STAR STUDIO, where creativity meets innovation to elevate your brand to new heights. Our work  is a showcase of the transformative journeys we've embarked on with visionary businesses like yours will be ...`}
           </p>
+
         </motion.div>
 
+        <motion.div
+          variants={fadeIn("", "", 0.1, 0.5)}
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <video
+            id="video"
+            style={{
+              display: "inline-block",
+              position: "static",
+              objectFit: "cover",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: -1,
+            }}
+            src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
+            playsInline
+            webkit-playsInline
+            muted
+            loop
+            autoplay
+            autoPlay
+          ></video>
+        </motion.div><br/>
 
-      <motion.div
-        variants={fadeIn("", "", 0.1, 0.5)}
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.98 }}
-      >
-        <video
-          id="video"
-          style={{
-            display: "inline-block",
-            position: "static",
-            objectFit: "cover",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: -1,
-          }}
-          src="https://realmtest.sfo3.digitaloceanspaces.com/rdz/__zz.mp4"
-          playsInline
-          webkit-playsInline
-          muted
-          loop
-          autoplay
-          autoPlay
-        ></video>
-      </motion.div>
+<p className={styles.sectionSubText}>
+          {`At ROC STAR STUDIO, we believe that a brand is not just a logo or a product; it's an experience, a story waiting to be told. `}
+</p>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(BrandDescriptionSection, "BrandDescriptionSection");
+export default SectionWrapper(
+  BrandDescriptionSection,
+  "BrandDescriptionSection"
+);
 //export default SectionWrapper(<div>gsrgs</div>, "fsefse");

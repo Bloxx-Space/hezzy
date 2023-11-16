@@ -62,7 +62,15 @@ const TalentDescriptionSection = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] p-8"
         >
           <p className={styles.sectionSubText}>
-            {`Welcome to a world where your brand's visual identity comes to life.`}
+            {`Meet the brilliant minds and artistic souls who form the backbone of our agency, dedicated to turning your visions into awe-inspiring realities.`}
+          </p><br/>
+
+          <p className={styles.sectionSubText}>
+            {`Beyond the skills listed on their profiles, our talents are united by a shared ethos: a commitment to excellence, a thirst for innovation, and a genuine love for the art of creation.`}
+          </p><br/><br/>
+
+          <p className={styles.sectionSubText}>
+            {`From graphic design to digital strategy, content creation to user experience, our team is a symphony of talents harmonizing to bring your ideas to life.`}
           </p>
         </motion.div>
       </div>
@@ -70,5 +78,8 @@ const TalentDescriptionSection = () => {
   );
 };
 
-export default SectionWrapper(TalentDescriptionSection, "TalentDescriptionSection");
+export default SectionWrapper(
+  TalentDescriptionSection,
+  "TalentDescriptionSection"
+);
 //export default SectionWrapper(<div>gsrgs</div>, "fsefse");
