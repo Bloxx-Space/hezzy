@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { styles } from "../styles/styles";
 import { staggerContainer } from "../utils/motion";
 
+import { useEffect } from "react";
+
 const SectionWrapper = (Component, idName) =>
-  function HOC() {
+
+  function HOC(props) {
     return (
       <motion.section
         variants={staggerContainer()}
@@ -17,7 +20,7 @@ const SectionWrapper = (Component, idName) =>
           &nbsp;
         </span>
 
-        <Component />
+        <Component {...props} />
       </motion.section>
     );
   };

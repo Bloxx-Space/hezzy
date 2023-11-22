@@ -16,14 +16,12 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import Image from "next/image";
 
-
 import NewBackgroundGradient from "./NewBackgroundGradient";
 
 const ServiceCard = ({ index, title, icon }) => (
   <div className="xs:w-[250px] w-full">
     <motion.div
-      style={{ backgroundColor: "#00000020", padding: "10px"}}
-
+      style={{ backgroundColor: "#00000020", padding: "10px" }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.9 }}
       variants={fadeIn("right", "spring", index * 1, 0.75)}
@@ -53,9 +51,11 @@ const ServiceCard = ({ index, title, icon }) => (
   </div>
 );
 
-const WorldSection = () => {
+const WorldSection = (props) => {
+
   return (
     <>
+      <h2>{props.id}</h2>
       <div className="xs:w-[250px] w-full">
         <_World></_World>
       </div>
@@ -76,7 +76,6 @@ const WorldSection = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-      
     </>
   );
 };
