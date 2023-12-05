@@ -54,7 +54,7 @@ function jumpTo(section)
 const AboutSection = () => {
   return (
     <>
-      <div className="min-h-screen min-w-screen">
+      <div className="min-w-screen">
         <motion.div
           className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
@@ -64,9 +64,9 @@ const AboutSection = () => {
           <br />
           <motion.h6
             variants={fadeIn("up", "spring", 1 * 1.1, 0.75)}
-            whileHover={{ scale: 1.05, color: "#FFF" }}
-            whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
+            whileHover={{ scale: 1.05, color: "#F0D0D0" }}
+            whileTap={{ scale: 0.9, color: "#F0D0D0" }}
+            whileInView={{ color: "#FFF" }}
             className={styles.sectionHeadLilText}
             onClick={()=>{ document.location.href = "https://www.youtube.com/watch?v=W02FeK118Fc"}}
           >
@@ -74,9 +74,9 @@ const AboutSection = () => {
           </motion.h6>
           <motion.h6
             variants={fadeIn("up", "spring", 1 * 1.2, 0.75)}
-            whileHover={{ scale: 1.05, color: "#FFF" }}
-            whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
+            whileHover={{ scale: 1.05, color: "#F0D0D0" }}
+            whileTap={{ scale: 0.9, color: "#F0D0D0" }}
+            whileInView={{ color: "#FFF" }}
             className={styles.sectionHeadLilText}
             onClick={()=>{ document.location.href = "https://www.instagram.com/bsg_hezzy"}}
             
@@ -87,7 +87,7 @@ const AboutSection = () => {
             variants={fadeIn("up", "spring", 1 * 1.3, 0.75)}
             whileHover={{ scale: 1.05, color: "#FFF" }}
             whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
+            whileInView={{ color: "#FFF" }}
             className={styles.sectionHeadLilText}
           >
             TikTok
