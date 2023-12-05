@@ -60,42 +60,6 @@ const AboutSection = () => {
           variants={fadeIn("", "", 0.1, 0.8)}
           style={{ padding: "25px", zIndex: 2 }}
         >
-          <motion.h2
-            variants={fadeIn("up", "spring", 1 * 0.5, 0.75)}
-            whileHover={{ scale: 1.05, color: "#FFF" }}
-            whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
-            className={styles.sectionHeadText}
-            onClick={() => {
-              jumpTo("#talentdescriptionsection")
-            }}
-          >
-            For Talent.
-          </motion.h2>
-          <motion.h2
-            variants={fadeIn("up", "spring", 1 * 0.7, 0.75)}
-            whileHover={{ scale: 1.05, color: "#FFF" }}
-            whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
-            className={styles.sectionHeadText}
-            onClick={() => {
-              jumpTo("#branddescriptionsection")
-            }}
-          >
-            For Brands.
-          </motion.h2>{" "}
-          <motion.h2
-            variants={fadeIn("up", "spring", 1 * 0.9, 0.75)}
-            whileHover={{ scale: 1.05, color: "#FFF" }}
-            whileTap={{ scale: 0.9, color: "#FFF" }}
-            whileInView={{ color: "#F0D0D0" }}
-            className={styles.sectionHeadText}
-            onClick={() => {
-              jumpTo("#enterprisedescriptionsection")
-            }}
-          >
-            For Enterprise.
-          </motion.h2>
           <br />
           <br />
           <motion.h6
@@ -104,8 +68,9 @@ const AboutSection = () => {
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadLilText}
+            onClick={()=>{ document.location.href = "https://www.youtube.com/watch?v=W02FeK118Fc"}}
           >
-            About.
+            YouTube
           </motion.h6>
           <motion.h6
             variants={fadeIn("up", "spring", 1 * 1.2, 0.75)}
@@ -113,8 +78,10 @@ const AboutSection = () => {
             whileTap={{ scale: 0.9, color: "#FFF" }}
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadLilText}
+            onClick={()=>{ document.location.href = "https://www.instagram.com/bsg_hezzy"}}
+            
           >
-            Career.
+            Instagram
           </motion.h6>
           <motion.h6
             variants={fadeIn("up", "spring", 1 * 1.3, 0.75)}
@@ -123,7 +90,7 @@ const AboutSection = () => {
             whileInView={{ color: "#F0D0D0" }}
             className={styles.sectionHeadLilText}
           >
-            Contact.
+            TikTok
           </motion.h6>
         </motion.div>
       </div>

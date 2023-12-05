@@ -6,10 +6,10 @@ import Gtag from "./components/Gtag"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'ROC STAR STUDIO',
+  title: 'G HEZZY',
   description: 'home.',
   openGraph: {
-    images: 'https://realmtest.sfo3.digitaloceanspaces.com/ROC/rocback-min.jpg',
+    images: 'https://realmtest.sfo3.digitaloceanspaces.com/hezzy/hezzycover-min.jpg',
   },
 }
 
