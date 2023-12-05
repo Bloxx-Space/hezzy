@@ -51,7 +51,8 @@ function jumpTo(section)
   });
 }
 
-const AboutSection = () => {
+const AboutSection = (props) => {
+  
   return (
     <>
       <div className="min-w-screen">
@@ -91,6 +92,20 @@ const AboutSection = () => {
             className={styles.sectionHeadLilText}
           >
             TikTok
+          </motion.h6>
+
+
+          <br /><br />
+
+          <motion.h6
+            variants={fadeIn("up", "spring", 1 * 1.3, 0.75)}
+            whileHover={{ scale: 1.05, color: "#FFF" }}
+            whileTap={{ scale: 0.9, color: "#FFF" }}
+            whileInView={{ color: "#FFF" }}
+            className={styles.sectionHeadLilText}
+            onClick={props.videoonclick}
+          >
+            {props.soundEnabled ? "disable" : "enable"}  sound
           </motion.h6>
         </motion.div>
       </div>

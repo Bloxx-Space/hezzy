@@ -8,9 +8,9 @@ const NewBackgroundVideo = (props) => {
   return (
     <>
       <motion.div
-        transition={{ duration: 0.3, delay: 1 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
+        animate={{ opacity: props.playing ? 1 : 0.2 }}
         exit={{ opacity: 0 }}
         className="flex h-screen w-screen absolute top-0"
         style={{zIndex: -2, userSelect: "none"}}
