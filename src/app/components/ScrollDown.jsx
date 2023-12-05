@@ -15,12 +15,6 @@ export default function ScrollDown() {
         className="flex h-[calc(100vh-74px)] w-screen absolute top-0 pb-16"
         style={{ userSelect: "none", pointerEvents: "none"}}
       >
-        <div
-          className="scrolldown m-auto"
-          onClick={() => {
-            window.scrollTo(0, 1000);
-          }}
-        >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -29,13 +23,8 @@ export default function ScrollDown() {
             style={{ userSelect: "auto", pointerEvents: "auto" }}
             className="whitespace-nowrap pl-12 sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider"
           >
-            SCROLL DOWN
+            WELCOME ...
           </motion.p>
-          <div className="chevrons">
-            <div className="chevrondown"></div>
-            <div className="chevrondown"></div>
-          </div>
-        </div>
       </motion.div>
     </>
   );
