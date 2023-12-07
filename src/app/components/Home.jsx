@@ -6,18 +6,8 @@ import React, { Suspense, useEffect, useState} from "react"
 
 import About  from "./About"
 
-
-const World = React.lazy(() => import('./World'));
-const TalentDescription = React.lazy(() => import('./TalentDescription'));
-const BrandDescription = React.lazy(() => import('./BrandDescription'));
-const EnterpriseDescription = React.lazy(() => import('./EnterpriseDescription'));
-
 export default function Home(props){
 
-    useEffect(()=>{
-
-        console.log(props.posts)
-    }, [props])
 
     const [soundEnabled, setSoundEnabled] = useState(false)
 
@@ -25,7 +15,6 @@ export default function Home(props){
     let video = document.getElementById("video")
     video.muted = !soundEnabled
   }, [soundEnabled])
-
     
 return(
     <>
