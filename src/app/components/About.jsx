@@ -59,7 +59,7 @@ const AboutSection = (props) => {
         <motion.div
           className="xs:w-[250px] w-full h-full"
           variants={fadeIn("", "", 0.1, 0.8)}
-          style={{ padding: "25px", zIndex: 2 }}
+          style={{ padding: "25px", zIndex: 2, userSelect: 'none' }}
         >
           <br />
           <br />

@@ -13,7 +13,6 @@ const NewBackgroundVideo = (props) => {
         animate={{ opacity: props.playing ? 1 : 0.2 }}
         exit={{ opacity: 0 }}
         className="flex h-[calc(100dvh)] w-screen absolute top-0"
-        style={{zIndex: -2, userSelect: "none"}}
       >
         <video
           id="video"
